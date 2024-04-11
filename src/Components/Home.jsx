@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProviders";
 
 const Home = () => {
+  const user = useContext(AuthContext);
+  console.log(user);
   return (
     <div
       className="hero min-h-screen"

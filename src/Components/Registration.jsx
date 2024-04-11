@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProviders";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
   const { createUser } = useContext(AuthContext);
@@ -64,16 +65,28 @@ const Registration = () => {
                 className="input input-bordered"
                 required
               />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn btn-primary">Register</button>
             </div>
           </form>
+          <div className="mx-auto">
+            <label className="label">
+              <span className="label-text">also can register with</span>
+            </label>
+            <div className="flex  gap-5">
+              <button className="btn btn-sm">Google</button>
+              <button className="btn btn-sm">github</button>
+            </div>
+          </div>
+          <div className="mx-auto mb-5">
+            <small>
+              Already have account? Please{" "}
+              <Link to="/login" className="link link-primary">
+                Login
+              </Link>
+            </small>
+          </div>
         </div>
       </div>
     </div>

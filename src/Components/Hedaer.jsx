@@ -35,7 +35,9 @@ const Hedaer = () => {
           </button>
         </>
       ) : (
-        <button className="btn btn-xs mx-5">Log in</button>
+        <Link to="/login">
+          <button className="btn btn-xs mx-5">Log in</button>
+        </Link>
       )}
     </div>
   );

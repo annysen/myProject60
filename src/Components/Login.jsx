@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProviders";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const { login } = useContext(AuthContext);
@@ -60,6 +61,14 @@ const Login = () => {
               <button className="btn btn-primary">Login</button>
             </div>
           </form>
+          <div className="mx-auto mb-5">
+            <small>
+              New in My Project? Please{" "}
+              <Link to="/reg" className="link link-primary">
+                Registration
+              </Link>
+            </small>
+          </div>
         </div>
       </div>
     </div>
